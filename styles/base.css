@@ -1,0 +1,67 @@
+:root {
+    /*Primary*/
+    --very-dark-blue: hsl(243, 87%, 12%);
+    --desaturated-blue: hsl(238, 22%, 44%);
+    /*Accent*/
+    --bright-blue: hsl(224, 93%, 58%);
+    --moderate-cyan: hsl(170, 45%, 43%);
+    /*Neutral*/
+    --light-grayish-blue: hsl(240, 75%, 98%);
+    --light-gray: hsl(0, 0%, 75%);
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+body {
+    display: grid;
+    min-height: 100svh;
+    width: 100svw;
+    container: body / inline-size;
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Open Sans';
+}
+
+main {
+    display: grid;
+    min-height: 100cqh;
+    width: 100cqw;
+    container: main / inline-size;
+}
+
+header {
+    display: grid;
+    height: 100px;
+    width: 100cqw;
+    padding: 0 10cqw 0 10cqw;
+    box-sizing: border-box;
+    align-content: center;
+    container: header / inline-size;
+    font-family: 'Raleway';
+}
+
+a:visited,
+a {
+    color: var(--desaturated-blue);
+    text-decoration: none;
+}
+svg[id="svgs"] {
+    display: none;
+}
+div[class="attribution"]{
+    position: absolute;
+    bottom: 1px;
+    left: 0px;
+    right: 0px;
+}
+button:hover{
+    filter: brightness(1.2);
+}

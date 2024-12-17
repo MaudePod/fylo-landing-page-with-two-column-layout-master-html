@@ -1,0 +1,93 @@
+section[class="three"] {
+    box-sizing: border-box;
+    padding: 10cqw;
+    display: grid;
+    place-content: center;
+    position: relative;
+    background: var(--desaturated-blue);
+
+}
+
+section[class="three"] section[class="text"] h2,
+section[class="three"] section[class="text"] {
+    color: var(--light-grayish-blue);
+}
+
+section[class="three"] section[class="card"] {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+section[class="three"] button {
+    background: var(--bright-blue);
+    color: var(--light-grayish-blue);
+    border-color: transparent;
+    outline-color: transparent;
+    cursor: pointer;
+    font-family: 'Raleway';
+    box-shadow: 0px 0px 20px 0px var(--desaturated-blue);
+    width: 40%;
+
+}
+
+label[for="get-started-for-free"] {
+    width: 100%;
+}
+
+input[id="get-started-for-free"] {
+    padding-inline: 20px;
+    padding: 10px;
+    width: 100%;
+    accent-color: var(--bright-blue);
+    outline-color: transparent;
+    border-width: 1px;
+}
+
+section[class="three"]:has(input[id="get-started-for-free"]:user-invalid) input[id="get-started-for-free"] {
+    border-color: red;
+}
+
+section[class="three"]:has(input[id="get-started-for-free"]:user-invalid) label[for="get-started-for-free"]::after {
+    content: "Please check your email";
+    color: var(--light-grayish-blue);
+    display: grid;
+}
+
+section[class="three"] section[class="card"] form {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+}
+
+section[class="three"] button,
+input[id="get-started-for-free"] {
+    box-sizing: border-box;
+    height: 40px;
+}
+
+@container (inline-size < 1000px) {
+    section[class="three"] section[class="card"] {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        text-align: center;
+    }
+
+    section[class="three"] section[class="text"] {
+        text-align: center;
+        order: 1;
+    }
+
+    section[class="three"] section[class="card"] form {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        order: 2;
+    }
+
+    section[class="three"] button,
+    input[id="get-started-for-free"] {
+        padding: 1px 4px 1px 4px;
+        width: 80%;
+    }
+}

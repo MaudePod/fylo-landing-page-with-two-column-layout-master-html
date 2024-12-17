@@ -1,0 +1,85 @@
+section[class="one"] {
+    box-sizing: border-box;
+    padding: 10cqw;
+    display: grid;
+    place-content: center
+}
+
+section[class="one"] section[class="card"] {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+section[class="text"] h2 {
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    font-family: 'Raleway';
+}
+
+form[class="form-card"] {
+    display: grid;
+    grid-template-columns: 50% 30%;
+    gap: 10px;
+}
+
+form[class="form-card"] label[for="get-started"] {
+    width: 100%;
+    display: grid;
+}
+
+form[class="form-card"] input[id="get-started"] {
+    padding-inline: 20px;
+    padding: 10px;
+    accent-color: var(--bright-blue);
+    outline-color: transparent;
+    border-width: 1px;
+}
+
+form[class="form-card"]:has(input[id="get-started"]:user-invalid) input[id="get-started"] {
+    border-color: red;
+}
+
+form[class="form-card"]:has(input[id="get-started"]:user-invalid)  label[for="get-started"]::after {
+    content: "Please check your email";
+    color: red;
+}
+
+form[class="form-card"] button {
+    background: var(--bright-blue);
+    color: var(--light-grayish-blue);
+    border-color: transparent;
+    outline-color: transparent;
+    cursor: pointer;
+    font-family: 'Raleway';
+    box-shadow: 0px 0px 20px 0px var(--light-gray);
+
+}
+
+section[class="image-container"] svg {
+    width: 100%;
+    height: 100%;
+}
+
+@container (inline-size < 1000px) {
+    section[class="one"] section[class="card"] {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        text-align: center;
+    }
+
+    form[class="form-card"] {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    section[class="text"] {
+        display: grid;
+        gap: 10px;
+        order: 2;
+    }
+
+    section[class="image-container"] {
+        order: 1;
+    }
+}

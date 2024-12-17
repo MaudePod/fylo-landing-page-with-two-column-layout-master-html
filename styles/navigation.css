@@ -1,0 +1,41 @@
+nav {
+    display: grid;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    grid-template-columns: 1fr auto;
+}
+
+nav svg {
+    height: 50px;
+    width: 180px;
+}
+
+nav menu {
+    list-style-type: none;
+    text-decoration: none;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 20px;
+}
+
+@container (inline-size < 1000px) {
+    nav {
+        gap: 10px;
+    }
+    nav svg {
+        height: 50px;
+        width: 100px;
+    }
+
+    nav menu {
+        width: 100%;
+        /* font-size: 0.8rem; */
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        place-self: center;
+        justify-items: center;
+    }
+}
